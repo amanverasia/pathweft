@@ -1,0 +1,17 @@
+[package]
+name = "pathweft-core"
+description = "Experimental transport-independent Pathweft message and forwarding core"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+hex = "0.4"
+serde.workspace = true
+serde_json.workspace = true
+sha2 = "0.10"
+sodium = { package = "libsodium-sys-stable", version = "=1.24.5" }
+thiserror = "2"
+uuid.workspace = true
+zeroize = "1"

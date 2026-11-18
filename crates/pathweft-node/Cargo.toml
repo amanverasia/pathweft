@@ -1,0 +1,19 @@
+[package]
+name = "pathweft-node"
+description = "Shared Pathweft TCP node service for desktop and Android hosts"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow = "1"
+base64 = "0.23"
+hex = "0.4"
+pathweft-core = { path = "../pathweft-core" }
+serde.workspace = true
+serde_json.workspace = true
+sha2 = "0.10"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "io-util", "sync", "time", "signal"] }
+uuid.workspace = true
+zeroize = "1"

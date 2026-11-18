@@ -1,0 +1,28 @@
+<resources>
+    <item name="bluetooth_status" type="id" />
+    <item name="start_bluetooth" type="id" />
+    <item name="stop_bluetooth" type="id" />
+    <item name="network_status" type="id" />
+    <item name="public_identity" type="id" />
+    <item name="start_network" type="id" />
+    <item name="stop_network" type="id" />
+    <item name="relay_enabled" type="id" />
+    <item name="discovery_enabled" type="id" />
+    <item name="connection_settings" type="id" />
+    <item name="settings_json" type="id" />
+    <item name="operation_result" type="id" />
+    <item name="recipient_id" type="id" />
+    <item name="message_text" type="id" />
+    <item name="send_message" type="id" />
+    <item name="queue_message" type="id" />
+    <item name="saved_outgoing" type="id" />
+    <item name="saved_incoming" type="id" />
+    <item name="my_contact_card" type="id" />
+    <item name="add_contact" type="id" />
+    <item name="contact_qr" type="id" />
+    <item name="contact_card_text" type="id" />
+    <item name="contact_card_input" type="id" />
+    <item name="contact_code" type="id" />
+    <item name="scanner_preview" type="id" />
+    <item name="scanner_hint" type="id" />
+</resources>

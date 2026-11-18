@@ -1,0 +1,30 @@
+[package]
+name = "pathweft-ble"
+description = "Experimental Bluetooth LE link adapter: carries Pathweft frames between local nodes over LE L2CAP"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+serde_json.workspace = true
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "io-util", "sync", "time", "signal"] }
+
+# BlueZ is Linux-only; other platforms build the platform-independent frame bridge and its tests.
+[target.'cfg(target_os = "linux")'.dependencies]
+bluer = { version = "=0.17.4", features = ["bluetoothd", "l2cap"] }
+dbus = { version = "0.9", features = ["vendored"] }
+futures = "0.3"
+uuid.workspace = true
+
+# CoreBluetooth (central role). Needs an app bundle with a Bluetooth usage description: see scripts/macos_ble_bundle.sh.
+[target.'cfg(target_os = "macos")'.dependencies]
+objc2 = "0.6"
+objc2-foundation = "0.3"
+objc2-core-bluetooth = "0.3"
+dispatch2 = "0.3"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["test-util"] }
